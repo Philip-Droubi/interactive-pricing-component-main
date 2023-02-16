@@ -44,15 +44,15 @@ priceSlider.addEventListener('change', () => {
 function getPrice(val) {
     switch (+val) {
         case 0:
-            return ['10 K', 8];
+            return ['10K ', 8];
         case 1:
-            return ['50 k', 12];
+            return ['50k ', 12];
         case 2:
-            return ['100 k', 16];
+            return ['100k ', 16];
         case 3:
-            return ['500 k', 24];
+            return ['500k ', 24];
         case 4:
-            return ['1 M', 36];
+            return ['1M ', 36];
         default:
             return [-1, -1];
     }
