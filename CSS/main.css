@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --Soft-Cyan-Full-Slider-Bar: hsl(174, 77%, 80%);
+    --Strong-Cyan-Slider-Backround: hsl(174, 86%, 45%);
+    --toggle-Cyan-Slider-hover: hsl(174, 70%, 60%);
+    --Light-Grayish-Red-Discount-Background: hsl(14, 92%, 95%);
+    --Light-Red-Discount-Text: hsl(15, 100%, 70%);
+    --Pale-Blue-CTA-Text: hsl(226, 100%, 87%);
+    --White-Pricing-Component-Background: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Main-Background: hsl(230, 100%, 99%);
+    --Light-Grayish-Blue-Empty-Slider-Bar: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue-Toggle-Background: hsl(223, 50%, 87%);
+    --Grayish-Blue-Text: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue-Text-CTA-Background: hsl(227, 35%, 25%);
+    --font-size: 15px;
+    --margin: 26px;
+}
+
+/* Start global rules */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    background-color: var(--Medium-Grey);
+    font-size: 24px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size);
+    background-image: url(../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: var(--Very-Pale-Blue-Main-Background);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+main {
+    width: 90%;
+    max-width: 540px;
+    min-width: 300px;
+}
+
+.upperText {
+    text-align: center;
+    color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+    position: relative;
+    padding-top: 40px;
+    font-weight: 800 !important;
+}
+
+.upperText p {
+    color: var(--Grayish-Blue-Text);
+    margin-top: 11px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.upperText .img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.card {
+    background-color: var(--White-Pricing-Component-Background);
+    border-radius: 8px;
+    box-shadow: 0 0 7px 1px #00000017;
+    margin-top: 90px;
+    font-weight: 600 !important;
+    color: var(--Grayish-Blue-Text) !important;
+}
+
+.top {
+    padding: 38px 38px 0;
+    position: relative;
+}
+
+.top .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top p {
+    text-transform: uppercase;
+    color: var(--Grayish-Blue-Text);
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.top .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+    display: flex;
+    align-items: center;
+}
+
+.top .price .month {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Grayish-Blue-Text);
+    margin-left: 6px;
+}
+
+.top .slider {
+    width: 100%;
+    margin-top: 26px;
+}
+
+.range {
+    width: 100%;
+    appearance: none;
+    background: linear-gradient(to right, var(--Soft-Cyan-Full-Slider-Bar) 0%, var(--Soft-Cyan-Full-Slider-Bar) 50%,
+            var(--Light-Grayish-Blue-Empty-Slider-Bar) 50%, var(--Light-Grayish-Blue-Empty-Slider-Bar) 100%);
+    height: 8px;
+    border-radius: 9px;
+    outline: none;
+    cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: var(--Strong-Cyan-Slider-Backround);
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 8px 0 var(--Strong-Cyan-Slider-Backround);
+}
+
+.range::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 10px 0 var(--Strong-Cyan-Slider-Backround);
+}
+
+.range::-webkit-slider-thumb:active {
+    background-color: #0caa9b;
+    cursor: grabbing;
+}
+
+.discount {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 38px;
+    font-size: 12px;
+    padding-right: 38px;
+}
+
+.discount p:nth-child(1) {
+    margin-right: 12px;
+}
+
+.discount button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-Grayish-Blue-Toggle-Background);
+    border-radius: 20px;
+    width: 44px;
+    height: 22px;
+    margin-right: 12px;
+    position: relative;
+}
+
+.discount button:hover {
+    background-color: var(--toggle-Cyan-Slider-hover);
+}
+
+.discount button .ball {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--White-Pricing-Component-Background);
+    left: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.discount .yearlyBill span {
+    margin: 0 12px;
+    background-color: var(--Light-Grayish-Red-Discount-Background);
+    color: var(--Light-Red-Discount-Text);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 135px;
+    border-top: 1px solid hsl(224, 65%, 95%);
+    margin-top: 38px;
+    padding: 0 38px;
+}
+
+.bottom ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom ul li {
+    font-size: 12px;
+}
+
+.bottom ul li img {
+    margin-right: 10px;
+}
+
+.bottom ul li:nth-child(2) {
+    margin: 10px 0;
+}
+
+.bottom .start-trail {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.bottom .start-trail button {
+    width: 170px;
+    height: 40px;
+    background-color: var(--Dark-Desaturated-Blue-Text-CTA-Background);
+    position: absolute;
+    right: 12px;
+    border-radius: 25px;
+    color: var(--Pale-Blue-CTA-Text);
+    font-size: 12px;
+    font-weight: 600 !important;
+    transition: 0.1s;
+}
+
+.bottom .start-trail button:hover {
+    color: var(--White-Pricing-Component-Background);
+    box-shadow: 1px 1px 3px 1px rgba(111, 0, 255, 0.164);
+}
+
+.attribution {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.attribution a {
+    color: var(--Strong-Cyan-Slider-Backround);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+    color: var(--Light-Red-Discount-Text);
+}
+
+@media (min-width:1100px) {
+    main {
+        margin-top: -3%;
+    }
+}
+
+@media (max-width:500px) {
+    .top {
+        padding: 38px 16px 0;
+    }
+
+    .top .flex {
+        flex-direction: column;
+    }
+
+    .top .price {
+        margin-top: 100px;
+    }
+
+    .top .slider {
+        max-width: 90%;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .discount {
+        padding-right: 16px;
+        flex-wrap: nowrap;
+    }
+
+    .discount .yearlyBill {
+        margin-right: 0;
+    }
+
+    .discount .yearlyBill span {
+        margin-right: 0;
+    }
+
+    .bottom {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        height: auto;
+    }
+
+    .bottom ul {
+        margin: 28px 0;
+    }
+
+    .bottom .start-trail {
+        justify-content: center;
+    }
+
+    .bottom .start-trail button {
+        position: relative;
+        right: 0;
+        margin-bottom: 28px;
+    }
+}

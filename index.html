@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <meta name='designer' content='Philip Droubi'>
+  <link rel="stylesheet" href="CSS/main.css">
+  <title>Frontend Mentor | interactive-pricing-component-main</title>
+</head>
+
+<body>
+  <main>
+    <div class="upperText">
+      <h1> Simple, traffic-based pricing </h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+      <div class="img">
+        <img src="images/pattern-circles.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+    <div class="card">
+      <div class="top">
+        <div class="flex">
+          <p><span class="views">100k </span>pageviews</p>
+          <div class="price">$<span class="num">16.00 </span> <span class="month">/ month</span></div>
+        </div>
+        <div class="slider">
+          <input type="range" name="price" id="price-slider" min="0" max="4" step="1" class="range" value="2">
+        </div>
+      </div>
+      <div class="discount">
+        <p>Monthly Billing</p>
+        <button>
+          <div class="ball"></div>
+        </button>
+        <p class="yearlyBill">Yearly Billing<span>25% discount</span></p>
+      </div>
+      <div class="bottom">
+        <ul>
+          <li><img src="images/icon-check.svg" alt="" aria-hidden="true"> Unlimited websites</li>
+          <li><img src="images/icon-check.svg" alt="" aria-hidden="true"> 100% data ownership</li>
+          <li><img src="images/icon-check.svg" alt="" aria-hidden="true"> Email reports</li>
+        </ul>
+        <div class="start-trail">
+          <button>Start my Trail</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+        Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Philip-Droubi" target="_blank" rel="noopener">Philip
+        Droubi</a>.
+    </div>
+  </footer>
+  <script src="JS/main.js"></script>
+
+</body>
